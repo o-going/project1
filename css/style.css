@@ -1,20 +1,39 @@
+body.black{
+    background-color: #000;
+    color: #fff;
+}
+
+body.white{
+    background-color: #fff;
+    color: #000;
+}
+
 header{
     border-bottom: 1px solid gray;
     padding: 20px;
 }
+
+header img{
+    height: 100px;
+    float: right;
+}
+
 nav{
     width: 200px;
     height: 600px;
     border-right: 1px solid gray;
     float: left;
 }
+
 nav ol{
     list-style: none;
 }
+
+#control{
+    float: right;
+}
+
 article{
     padding: 20px;
     float: left;
-}
-article h2{
-    font-size: 50px;
 }
