@@ -1,3 +1,8 @@
+<?php
+    $conn = mysqli_connect('localhost','root','rkdud4578');
+    mysqli_select_db($conn, 'opentutorials');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
