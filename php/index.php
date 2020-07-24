@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost','root','1111');
+    $conn = mysqli_connect('localhost','root',1111);
     mysqli_select_db($conn, 'opentutorials');
     $result = mysqli_query($conn, 'SELECT * FROM topic');
 ?>
@@ -19,7 +19,7 @@
         <ol>
             <?php
                 while($row = mysqli_fetch_assoc($result)){
-                    echo "<li><a href='http://localhost/php/index.php?id=".$row['id']."'>".$row['title']."</a></li>"."\n";
+                    echo "<li><a href='http://localhost/php/index.php?id=".$row['id']."'>".htmlspecialchars($row['title'])."</a></li>"."\n";
                 }
             ?>
         </ol>
@@ -35,9 +35,9 @@
             $sql = "SELECT topic.id,title,name,description FROM topic LEFT JOIN user ON topic.author = user.id WHERE topic.id=".$_GET['id'];
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
-            echo '<h2>'.$row['title'].'</h2>';
-            echo '<p>'.$row['name'].'</p>';
-            echo $row['description'];
+            echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
+            echo '<p>'.htmlspecialchars($row['name']).'</p>';
+            echo strip_tags($row['description'], '<a><h1><h2><h3><h4><h5><ul><ol><li>'); // 사용한 태그들만 허용
             }
         ?>
     </article>
