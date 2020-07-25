@@ -8,34 +8,22 @@ body.white{
     color: #000;
 }
 
-header{
-    border-bottom: 1px solid gray;
-    padding: 20px;
+#logo{
+    width: 100px;
 }
 
-header img{
-    height: 100px;
-    float: right;
+.container{
+    padding-top: 20px;
 }
 
-nav{
-    width: 200px;
-    height: 600px;
-    border-right: 1px solid gray;
-    float: left;
+form input{
+    margin-bottom: 20px;
 }
 
-nav ol{
-    padding: 0px;
-    list-style: none;
+form input.sub_btn{
+    margin-top: 20px;
 }
 
 #control{
-    float: right;
-}
-
-article{
-    width: 500px;
-    padding: 20px;
-    float: left;
+    margin-bottom: 40px;
 }
