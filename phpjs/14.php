@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost", "root", 1111);
+    $conn = mysqli_connect("localhost", "root", 'rkdud4578');
     mysqli_select_db($conn, "opentutorials");
     $name = mysqli_real_escape_string($conn, $_GET['name']);
     $password = mysqli_real_escape_string($conn, $_GET['password']);
